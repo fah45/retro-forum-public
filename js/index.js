@@ -1,130 +1,12 @@
-// const loadPhone = async (searchText, isShowAll) =>{
-//     const res = await fetch(`https://openapi.programming-hero.com/api/phones?search=${searchText}`);
-//     const data = await res.json();
-//     const phones = data.data;
-//     // console.log(phones);
-//     displayPhones(phones, isShowAll);
-// }
-
-// const displayPhones = (phones, isShowAll) =>{
-//     //  console.log(phones);
-
-//     const phoneContainer = document.getElementById('phone-container');
-//     // clear phone container cards before adding new cards
-//     phoneContainer.textContent = '';
-
-//     // display show all button if there are more than 12 phones
-//     const showAllContainer = document.getElementById('show-all-container')
-//     if(phones.length > 12 && !isShowAll){
-//        showAllContainer.classList.remove('hidden');
-//     }
-//     else{
-//         showAllContainer.classList.add('hidden');
-//     }
-//     // console.log('is show all', isShowAll)
-
-//     // console.log(phones.length)
-//     // display only first 12 phones if not ShowAll
-//    if(!isShowAll){
-//     phones = phones.slice(0,12);
-//    }
-
-//     phones.forEach(phone =>{
-//         // console.log(phone);
-//         // 2: create a div
-//         const phoneCard = document.createElement('div');
-//         phoneCard.classList = `card  bg-gray-100 p-4 shadow-xl`;
-//         // 3: set inner html
-//         phoneCard.innerHTML = `
-//         <figure><img src="${phone.image}" alt="Shoes" /></figure>
-//         <div class="card-body">
-//         <h2 class="card-title">${phone.phone_name}</h2>
-//         <p>If a dog chews shoes whose shoes does he choose?</p>
-//         <div class="card-actions justify-center">
-//         <button onclick="handleShowDetail('${phone.slug}')" class="btn btn-primary">Show Details</button>
-//         </div>
-//     </div>
-//         `;
-//         // 4: append child
-//         phoneContainer.appendChild(phoneCard);
-//     });
-
-//     // hide loading spinner
-//     toggleLoadingSpinner(false);
-// }
-
-// // 
-// const handleShowDetail = async (id) =>{
-//     // console.log('clicked show details', id)
-//     // load single phone data
-//     const res = await fetch(`https://openapi.programming-hero.com/api/phone/${id}`);
-//     const data = await res.json();
-//     const phone = data.data;
-
-//     showPhoneDetails(phone)
-// }
-
-// const showPhoneDetails = (phone) =>{
-//     console.log(phone);
-//     const phoneName = document.getElementById('show-detail-phone-name');
-//     phoneName.innerText = phone.name;
-    
-
-//     const showDetailContainer = document.getElementById('show-detail-container');
-
-//     showDetailContainer.innerHTML = `
-//      <img src="${phone.image}" alt="">
-//      <p><span>Storage:</span>${phone?.mainFeatures?.storage}</p>
-//      <p><span>Storage:</span>${phone?.others?.GPS || 'NO GPS availabe'}</p>
-//      <p><span>Storage:</span>${phone.others?.GPS ? phone.others.GPS : 'NO GPS availabe in this device'}</p>
-//     `
-
-
-//     // show the modal
-//     show_details_modal.showModal();
-// }
-
-// // handle search button
-// const handleSearch = (isShowAll) =>{
-//     toggleLoadingSpinner(true);
-//     const searchField = document.getElementById('search-field');
-//     const searchText = searchField.value;
-//     console.log(searchText);
-//     loadPhone(searchText, isShowAll);
-// }
-// // handle search recap
-// // const handleSearch2 = () =>{
-// //     toggleLoadingSpinner(true);
-// //     const searchField = document.getElementById('search-field2')
-// //     const searchText = searchField.value;
-// //     loadPhone(searchText);
-
-// // }
-
-// const toggleLoadingSpinner = (isLoading) =>{
-//     const loadingSpinner = document.getElementById('loading-spinner');
-//    if(isLoading){
-//     loadingSpinner.classList.remove('hidden');
-//    }
-//    else{
-//     loadingSpinner.classList.add('hidden');
-//    }
-// }
-
-// // handle show all
-// const handleShowAll = () =>{
-//     handleSearch(true);
-// }
-
-// // loadPhone();
 
 // _________________________________________________________________________
 // Latest Post Field
 const latestPostContainer = document.getElementById('latest-card-container')
+// Get Element By Id
 
 const latestLoader = async()=>{
-const res = await fetch('https://openapi.programming-hero.com/api/retro-forum/latest-posts');
-const posts = await res.json();
+  const res = await fetch('https://openapi.programming-hero.com/api/retro-forum/latest-posts');
+  const posts = await res.json();
 // console.log(posts)
 displayLatestPosts(posts)
 }
@@ -158,21 +40,58 @@ latestPostContainer.appendChild(cardDiv)
 });
 }
 latestLoader()
-
+const letsDiscussLoaderContainer = document.getElementById('right-container')
 // lets Discuss Section
 const letsDiscussLoader = async()=>{
     const res = await fetch('https://openapi.programming-hero.com/api/retro-forum/posts');
     const allPostsData = await res.json();
-    const allPosts = allPostsData.posts
-    displayAllPosts(allPosts)
+    const allPosts = allPostsData.posts;
+    // console.log(typeof allPosts);
+    // const allPosts = allPostsData.posts;
+    displayAllPosts(allPosts);
     }
 
-    const displayAllPosts = (allPosts) =>{
-        console.log(allPosts)
-        allPosts.forEach(singlePost => {
-            console.log(singlePost)
-              
-        });
-    }
+    // const displayAllPosts = (allPosts) =>{
+    //     // console.log(allPosts)
+    //     allPosts.forEach(singlePost => {
+    //         console.log(singlePost)
+    //         // Div Create 
+    //        const cardDiv2 = document.createElement('div')
+    //       // div inner HTML
+    //       cardDiv2.innerHTML = `  <div class="hero p-2 border-4 rounded-3xl bg-base-200">
+    //       <div class="hero-content flex-col lg:flex-row gap-10">
+    
+    //         <div class="indicator">
+    //           <span class="indicator-item badge badge-secondary"></span>
+    //           <div class="place-items-start h-[250px]">
+    //             <img class="w-32 h-32  rounded-3xl"
+    //               src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+    //           </div>
+    //         </div>
+    
+    //         <div>
+    //           <h1 class="text-xl font-bold">10 Kids Unaware of Their Halloween Costume</h1>
+    //           <p class="py-6">>${post?.author?.posted_date ? post.author.posted_date : 'No Date Found'}</p>
+    //           <div class="flex justify-around items-center">
+    //             <div class="border-t-4 border-dashed flex p-2 gap-10">
+    //               <p><i class="fa-solid fa-message"></i><span id="icons"> 560 </span></p>
+    //               <p><i class="fa-solid fa-eye"></i><span id="icons"> 1,568 </span></p>
+    //               <p><i class="fa-regular fa-clock"></i><span id="icons"> 5 </span>min</p>
+    //             </div> 
+    //             <div>
+    //               <button class="btn p-4 text-white text-sm bg-[#797DFC] rounded-full"><i class="fa-regular fa-envelope"></i></button>
+    //             </div>
+    //           </div>
+    //         </div>
+    //       </div>
+    //     </div> 
+    //       `
+    //       latestPostContainer.appendChild(cardDiv2)
+
+          
+    //         // Div Append
+
+    //     });
+    // }
 
     letsDiscussLoader()
