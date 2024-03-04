@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Forum Landing</title>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://kit.fontawesome.com/2d289463e9.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <header>
+    <!-- navbar start -->
+    <div class="navbar bg-base-100">
+      <div class="navbar-start">
+        <div class="dropdown">
+          <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
+            </svg>
+          </div>
+          <!-- <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                <li><i class="fa-solid fa-house"></i></li>
+                <li><i class="fa-solid fa-pencil"></i></li>
+                <li><i class="fa-solid fa-user-plus"></i></li>
+                <li><i class="fa-regular fa-flag"></i></li>
+              </ul> -->
+        </div>
+        <a class="btn btn-ghost text-xl">Fahim</a>
+      </div>
+      <div class="navbar-center hidden lg:flex">
+
+      </div>
+      <div class="navbar-end">
+        <div class="lg:flex hidden lg:px-5">
+          <ul class="menu menu-horizontal px-1">
+            <li><i class="fa-solid fa-house"></i></li>
+            <li><i class="fa-solid fa-pencil"></i></li>
+            <li><i class="fa-solid fa-user-plus"></i></li>
+            <li><i class="fa-regular fa-flag"></i></li>
+          </ul>
+          <button class="btn rounded-full text-white bg-blue-400">
+            Sign In
+          </button>
+        </div>
+      </div>
+      <!-- navbar end -->
+  </header>
+  <!-- carousel banner section 1 -->
+  <div class="relative lg:mb-20">
+    <div class="bg-[#12132D] rounded-[32px]">
+      <img src="images/bgbanner.png" class="w-full h-[550px] object-cover" alt="">
+    </div>
+    <div
+      class="lg:flex flex-row gap-8 lg:gap-16 justify-around space-y-5 mx-auto absolute top-[20%] left-[8%] lg:top-1/4 lg:left-[18%]">
+      <div class="space-y-2 lg:space-y-5">
+        <h1 class="mb-5 text-3xl lg:text-6xl font-bold lg:font-extrabold text-white">Welcome to the <br> <span
+            class="text-[#797DFC]">Fahim</span> <span>Forum</span> </h1>
+        <p class="mb-5 fonts-inter text-lg text-white">
+          Forums facilitate online discussions, fostering communities where users share insights and seek advice on
+          various topics,<br> promoting engagement and knowledge exchange.</p>
+        <label class="input input-bordered w-auto rounded-full flex items-center gap-2">
+          <input id="search-input" type="text" placeholder="Search here anything" class="grow rounded-full" />
+          <button onclick="handleSearch()" class="badge badge-info p-4 text-white text-sm bg-[#797DFC]">Search</button>
+        </label>
+      </div>
+      <div class="text-sm space-y-5 rounded-2xl bg-white py-3 lg:text-2xl text-black">
+        <div class="flex justify-around gap-10 items-center">
+          <p>Registered users</p><span>1</span>
+        </div>
+        <div class="flex justify-around gap-10 items-center">
+          <p>Forum</p><span>1</span>
+        </div>
+        <div class="flex justify-around gap-10 items-center">
+          <p>Topics</p><span>1</span>
+        </div>
+        <div class="flex justify-around gap-10 items-center">
+          <p>Replies</p><span>1</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  <main>
+    <!-- carousel banner section 2 -->
+    <div class="bg-[#12132D] rounded-[32px]">
+      <div class="flex justify-around py-5 pl-5 lg:pl-20 items-center">
+        <div class="space-y-4">
+          <h1 class="text-3xl lg:text-6xl font-bold lg:font-extrabold text-white">Join Our Forum </h1>
+          <p class="text-white text-base">Expand your network and share ideas by joining our dynamic forum today!</p>
+          <button class="bg-[#797DFC] rounded-[50px] py-2 px-4 text-white">Registered Now</button>
+        </div>
+        <div class="flex justify-end p-4 lg:p-8">
+          <img src="images/joinforum.png" alt="">
+        </div>
+      </div>
+    </div>
+    <!-- card -->
+    <!-- card -->
+    <!-- <div id="card-container" class="card  bg-base-100 shadow-xl p-10 grid grid-cols-4 gap-5 rounded-xl ">
+      <div>
+        <figure><img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
+      </div>
+      <div class="card-body p-3">
+        <p>29 January 2024</p>
+        <h1>What will a mars habitat force that impact in our daily life!!!</h1>
+        <p>Yes, you can run unit tests and view the results directly within the app. </p>
+      </div>
+    </div> -->
+<div id="latest-card-container" class="flex justify-center space-x-4">
+  <!-- <div class="card w-96 bg-base-100 shadow-xl mt-6">
+    <figure><img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
+    <div class="card-body">
+      <p><i class="fa-solid fa-calendar-days"></i> <span id="latest-date"> 29 january 2024</span></p>
+      <h2 id="latest-title" class="card-title mt-4">What will a mars habitat force that impact in our daily life!!!</h2>
+      <p id="latest-paragraph" class="mt-3">Yes, you can run unit tests and view the results directly within the app. </p>
+      <div class="flex gap-5 mt-4">
+        <div>
+          <img id="latest-image" class="rounded-full h-[58px] w-[60px]" src="images/M-60.jpg" alt="">
+        </div>
+        <div>
+          <h1 id="latet-name" class="text-xl font-bold">
+            Fahim
+          </h1>
+          <p id="latest-designation" class="text-lg">
+            Unknown
+          </p>
+        </div>
+      </div>
+    </div>
+  </div> -->
+</div>
+  </main>
+  <footer class="footer footer-center p-10  text-black bg-[#0C0D2D00] text-primary-content">
+    <div class="footer-top">
+      <h1 class="text-[#12132D] font-extrabold">Fahim</h1>
+    </div>
+    <p>Forums facilitate online discussions, fostering communities where users share insights and seek advice on various
+      topics, promoting engagement and knowledge exchange.</p>
+    <div class="footer-icons grid grid-flow-col gap-4 font-extrabold">
+      <i class="fa-brands fa-facebook"></i>
+      <i class="fa-brands fa-instagram"></i>
+      <i class="fa-brands fa-twitter"></i>
+      <i class="fa-brands fa-github"></i>
+    </div>
+    <hr>
+    <p>2017, All Rights Reserved</p>
+  </footer>
+
+  <script src="js/index.js"></script>
+</body>
+
+</html>
