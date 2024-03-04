@@ -170,7 +170,8 @@ const letsDiscussLoader = async()=>{
     const displayAllPosts = (allPosts) =>{
         console.log(allPosts)
         allPosts.forEach(singlePost => {
-            console.log(singlePost)  
+            console.log(singlePost)
+              
         });
     }
 
