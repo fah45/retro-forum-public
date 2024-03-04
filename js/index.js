@@ -133,7 +133,7 @@ posts.forEach(post => {
     // console.log(post)
 const cardDiv = document.createElement('div')
 cardDiv.innerHTML =`
-<div class="card w-[500px] h-[482px] bg-base-100 shadow-xl mt-6">
+<div class="card w-[300px] h-[482px] bg-base-100 shadow-xl mt-6">
 <figure><img src="${post.cover_image}" alt="Shoes" /></figure>
 <div class="card-body">
   <p><i class="fa-solid fa-calendar-days"></i> <span id="latest-date">${post?.author?.posted_date ? post.author.posted_date : 'No Date Found'}</span></p>
