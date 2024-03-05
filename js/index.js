@@ -40,7 +40,7 @@ latestPostContainer.appendChild(cardDiv)
 });
 }
 latestLoader()
-const letsDiscussLoaderContainer = document.getElementById('right-container')
+const letsDiscussLoaderContainer = document.getElementById('left-container')
 // lets Discuss Section
 const letsDiscussLoader = async()=>{
     const res = await fetch('https://openapi.programming-hero.com/api/retro-forum/posts');

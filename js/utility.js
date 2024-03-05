@@ -1,6 +1,6 @@
 const displayAllPosts = (allPosts) =>{
     //  console.log(allPosts)
-    const latestPostContainer = document.getElementById('right-container');
+    const latestPostContainer = document.getElementById('left-container');
     allPosts.forEach((singlePost) => {
         console.log(singlePost)
         // Div Create 
@@ -29,7 +29,7 @@ const displayAllPosts = (allPosts) =>{
                 <p><i class="fa-regular fa-clock"></i><span id="icons"> ${singlePost?.posted_time || 'error'} </span>min</p>
                 </div> 
                 <div>
-                <button class="btn p-4 text-white text-sm bg-[#797DFC] rounded-full"><i class="fa-regular fa-envelope"></i></button>
+                <button  class="btn p-4 text-white text-sm bg-[#797DFC] rounded-full"><i class="fa-regular fa-envelope"></i></button>
                 </div>
             </div>
             </div>
